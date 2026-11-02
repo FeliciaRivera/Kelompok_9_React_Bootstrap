@@ -1,20 +1,10 @@
-<<<<<<< HEAD
 # Warung Pojok Mba Sofy — React + Bootstrap
 
-Lanjutan proyek kelompok mata kuliah **Pemrograman Antarmuka Pengguna**. Website profil & katalog UMKM yang sebelumnya berupa HTML/CSS statis (`index.html`, `menu.html`, `about.html`) dimigrasikan menjadi **Single Page Application React** dengan **Bootstrap 5**, lalu ditambah fitur interaktif baru.
+Lanjutan proyek kelompok mata kuliah **Pemrograman Antarmuka Pengguna**. Website profil & katalog UMKM yang sebelumnya berupa HTML/CSS statis (`index.html`, `menu.html`, `about.html`) dimigrasikan menjadi **Single Page Application React** dengan **Bootstrap 5**.
 
 - Kelompok: 9 (SI A) · Studi kasus: Opsi A, Profil & Katalog UMKM
 - Anggota: Deio Castello Sujati (825250002), Felicia Rivera (825250003), Muhammad Ubait Dhaifullah (825250012)
 
-## Cara Menjalankan
-
-```bash
-npm install
-npm run dev      # buka http://localhost:5173
-npm run build    # build produksi ke folder dist/
-```
-
-Butuh Node.js 18 ke atas.
 
 ## Fitur
 
@@ -40,24 +30,6 @@ Pola yang dipakai:
 2. Handler **dioper ke anak lewat props**.
 3. Anak **memanggil handler dari props** saat event terjadi.
 
-```jsx
-// App.jsx (INDUK) — handler di atas return
-function handleAddToCart(item) {
-  setCart([...cart, { id: item.id, qty: 1 }]);
-}
-return <MenuPage onAddToCart={handleAddToCart} />;
-
-// MenuCard.jsx (ANAK) — handler pembungkus juga di atas return
-function MenuCard(props) {
-  function handleAddClick() {
-    props.onAddToCart(props.item);
-  }
-  return <button onClick={handleAddClick}>+ Keranjang</button>;
-}
-
-// Jika tidak butuh parameter, props dipanggil langsung:
-<button onClick={props.onClose}>Tutup</button>
-```
 
 ## Foto Menu
 
@@ -100,6 +72,3 @@ App (cart, handleIncreaseQty, handleDecreaseQty, handleRemoveFromCart)
 ## Teknologi
 
 React 19 · Vite · Bootstrap 5.3 (CSS) · Hook `useState` & `useRef`
-=======
-# Kelompok_9_React_Bootstrap
->>>>>>> 78548a4a12ecaa2f878d1f2fa282ae38d89c7484
