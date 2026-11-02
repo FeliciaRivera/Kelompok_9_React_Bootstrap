@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Warung Pojok Mba Sofy — React + Bootstrap
 
 Lanjutan proyek kelompok mata kuliah **Pemrograman Antarmuka Pengguna**. Website profil & katalog UMKM yang sebelumnya berupa HTML/CSS statis (`index.html`, `menu.html`, `about.html`) dimigrasikan menjadi **Single Page Application React** dengan **Bootstrap 5**, lalu ditambah fitur interaktif baru.
@@ -99,3 +100,6 @@ App (cart, handleIncreaseQty, handleDecreaseQty, handleRemoveFromCart)
 ## Teknologi
 
 React 19 · Vite · Bootstrap 5.3 (CSS) · Hook `useState` & `useRef`
+=======
+# Kelompok_9_React_Bootstrap
+>>>>>>> 78548a4a12ecaa2f878d1f2fa282ae38d89c7484
