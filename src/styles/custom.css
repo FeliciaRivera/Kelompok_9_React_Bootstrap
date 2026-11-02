@@ -1,0 +1,196 @@
+/* =============================================================
+   TEMA WARUNG POJOK MBA SOFY di atas Bootstrap 5
+   Palet warna sama dengan style.css versi HTML, dipasang ke
+   variabel Bootstrap agar class bawaan (btn-primary, text-primary,
+   bg-*, badge, form-control:focus, dsb.) otomatis ikut tema.
+   ============================================================= */
+
+:root {
+  --jambalaya: #f2b475;
+  --shallot-peel: #f4c47a;
+  --touch-of-glamour: #df8e48;
+  --dark-orange: #c65605;
+  --maine-coon: #ca762b;
+  --canvas: #f5e9d6;
+  --frame-bg: #fffaf3;
+  --text: #3a2210;
+  --text-light: #fff8f0;
+  --card-tint: #fdf2e2;
+  --line-soft: #e3c9a3;
+
+  /* Override variabel Bootstrap */
+  --bs-primary: #c65605;
+  --bs-primary-rgb: 198, 86, 5;
+  --bs-body-bg: var(--canvas);
+  --bs-body-color: var(--text);
+  --bs-body-font-family: Arial, Helvetica, sans-serif;
+  --bs-link-color: #c65605;
+  --bs-link-color-rgb: 198, 86, 5;
+  --bs-link-hover-color: #ca762b;
+  --bs-link-hover-color-rgb: 202, 118, 43;
+  --bs-border-color: var(--line-soft);
+  --bs-focus-ring-color: rgba(198, 86, 5, 0.25);
+}
+
+html { scroll-behavior: smooth; }
+body { font-size: 15px; line-height: 1.6; }
+
+/* Input & modal tetap terang di atas kanvas krem */
+.form-control, .form-select, .modal-content { background-color: #fff; }
+
+/* ---------- Tombol ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--dark-orange);
+  --bs-btn-border-color: var(--dark-orange);
+  --bs-btn-hover-bg: var(--maine-coon);
+  --bs-btn-hover-border-color: var(--maine-coon);
+  --bs-btn-active-bg: #a94804;
+  --bs-btn-active-border-color: #a94804;
+  --bs-btn-disabled-bg: var(--touch-of-glamour);
+  --bs-btn-disabled-border-color: var(--touch-of-glamour);
+  font-weight: 600;
+}
+.btn-outline-primary {
+  --bs-btn-color: var(--dark-orange);
+  --bs-btn-border-color: var(--dark-orange);
+  --bs-btn-hover-bg: var(--dark-orange);
+  --bs-btn-hover-border-color: var(--dark-orange);
+  --bs-btn-active-bg: var(--dark-orange);
+  --bs-btn-active-border-color: var(--dark-orange);
+  font-weight: 600;
+}
+.btn-light-brand {
+  background: var(--frame-bg);
+  color: var(--dark-orange);
+  font-weight: 700;
+  border: none;
+}
+.btn-light-brand:hover { background: var(--jambalaya); color: var(--dark-orange); }
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--dark-orange);
+  box-shadow: 0 0 0 0.2rem rgba(198, 86, 5, 0.18);
+}
+.form-check-input:checked { background-color: var(--dark-orange); border-color: var(--dark-orange); }
+
+/* ---------- Header / Navbar ---------- */
+.site-header { background: var(--dark-orange); box-shadow: 0 2px 8px rgba(58, 34, 16, 0.15); }
+.site-header .navbar-brand h1 { font-size: 1.15rem; }
+.brand-logo {
+  width: 46px; height: 46px; object-fit: cover; border-radius: 50%;
+  background: var(--text-light); padding: 3px; border: 2px solid var(--frame-bg);
+}
+.site-header .nav-link {
+  color: var(--text-light) !important; font-weight: 600; font-size: 14px;
+  border-radius: 4px; padding: 8px 14px !important;
+}
+.site-header .nav-link:hover,
+.site-header .nav-link.active { background: var(--maine-coon); }
+.site-header .dropdown-menu { background: var(--frame-bg); border-color: var(--line-soft); }
+.site-header .dropdown-item:hover { background: var(--card-tint); color: var(--dark-orange); }
+.navbar-toggler { border-color: rgba(255, 255, 255, 0.5); }
+.site-header .brand-tagline { color: rgba(255, 248, 240, 0.85); }
+@media (max-width: 575.98px) {
+  .site-header .navbar-brand h1 { font-size: 1rem; }
+  .brand-logo { width: 38px; height: 38px; }
+}
+
+/* ---------- Kartu & panel ---------- */
+.panel {
+  background: var(--frame-bg); border-radius: 10px; padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(58, 34, 16, 0.08);
+}
+.panel-title {
+  color: var(--dark-orange); border-bottom: 2px solid var(--jambalaya);
+  padding-bottom: 8px; margin-bottom: 14px; font-size: 1.3rem; font-weight: 700;
+}
+.panel-subtitle {
+  color: var(--maine-coon); border-bottom: 1px dashed var(--line-soft);
+  padding-bottom: 6px; margin: 22px 0 12px; font-size: 1.05rem; font-weight: 700;
+}
+.page-title {
+  color: var(--dark-orange); border-bottom: 2px solid var(--jambalaya);
+  padding-bottom: 10px; font-weight: 700;
+}
+.info-box { background: var(--card-tint); border-radius: 8px; padding: 12px 14px; }
+.info-label { font-weight: 700; color: var(--maine-coon); font-size: 13px; margin: 0 0 2px; }
+.info-text { font-size: 13px; margin: 0; }
+.text-brand { color: var(--dark-orange) !important; }
+.text-brand-soft { color: var(--maine-coon) !important; }
+.bg-card-tint { background: var(--card-tint) !important; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--touch-of-glamour), var(--maine-coon));
+  color: var(--text-light); border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(58, 34, 16, 0.15);
+}
+
+.feature-list li {
+  background: var(--card-tint); border-left: 4px solid var(--touch-of-glamour);
+  border-radius: 4px; padding: 10px 14px; margin-bottom: 8px; font-size: 14px;
+}
+.article-img { width: 100%; height: 280px; object-fit: cover; border-radius: 8px; }
+
+/* ---------- Kartu kategori (klikable) ---------- */
+.category-card {
+  background: var(--card-tint); border: 1px solid transparent; border-radius: 8px;
+  padding: 10px; text-align: left; width: 100%; height: 100%;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.category-card:hover { transform: translateY(-3px); border-color: var(--touch-of-glamour); }
+.category-card img { width: 100%; height: 70px; object-fit: cover; border-radius: 6px; margin-bottom: 6px; }
+
+/* ---------- Kartu menu ---------- */
+.menu-card {
+  background: var(--frame-bg); border: none; border-radius: 10px; overflow: hidden;
+  box-shadow: 0 2px 8px rgba(58, 34, 16, 0.1); transition: transform 0.2s ease;
+}
+.menu-card:hover { transform: translateY(-4px); }
+.menu-card .card-img-top { height: 150px; object-fit: cover; }
+.menu-card .harga { color: var(--dark-orange); font-weight: 700; }
+
+.filter-pill.active { background: var(--dark-orange); color: var(--text-light); border-color: var(--dark-orange); }
+
+/* ---------- Tabel harga (rowspan) ---------- */
+.price-table { --bs-table-bg: var(--frame-bg); --bs-table-hover-bg: var(--jambalaya); font-size: 14px; }
+.price-table > :not(caption) > * > * { border-color: var(--touch-of-glamour); }
+.price-table thead .judul th { background: var(--dark-orange); color: var(--text-light); text-align: center; }
+.price-table thead .kolom th { background: var(--maine-coon); color: var(--text-light); }
+.price-table td.kategori { font-weight: 700; color: var(--maine-coon); background: var(--shallot-peel); vertical-align: middle; }
+
+/* ---------- Galeri ---------- */
+.gallery-item { border-radius: 8px; overflow: hidden; background: var(--frame-bg); box-shadow: 0 2px 8px rgba(58, 34, 16, 0.1); transition: transform 0.2s ease; }
+.gallery-item:hover { transform: translateY(-4px); }
+.gallery-item img { width: 100%; height: 150px; object-fit: cover; }
+.gallery-item figcaption { background: var(--card-tint); color: var(--maine-coon); font-weight: 600; font-size: 13px; padding: 10px; text-align: center; }
+
+/* ---------- Keranjang ---------- */
+.cart-thumb { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; }
+.qty-control .btn { width: 34px; }
+.qty-control .qty-value { min-width: 36px; text-align: center; font-weight: 700; }
+.summary-sticky { position: sticky; top: 96px; }
+.cart-floating {
+  position: sticky; bottom: 16px; z-index: 50;
+  background: var(--dark-orange); color: var(--text-light);
+  border-radius: 10px; box-shadow: 0 6px 18px rgba(58, 34, 16, 0.3);
+}
+
+/* ---------- Peta ---------- */
+.map-frame { width: 100%; height: 300px; border: 0; border-radius: 6px; }
+/* Mode "fill": kotak peta mengambil sisa tinggi panel sidebar */
+.map-fill { flex: 1 1 auto; display: flex; flex-direction: column; }
+.map-fill .map-frame { flex: 1 1 auto; height: auto; min-height: 300px; }
+
+/* ---------- Footer ---------- */
+.site-footer { background: var(--dark-orange); color: var(--text-light); font-size: 13px; }
+.site-footer .btn-link { color: var(--text-light); font-size: 13px; text-decoration: none; }
+.site-footer .btn-link:hover { text-decoration: underline; }
+
+/* ---------- Toast notifikasi ---------- */
+.notif-wrap { position: fixed; right: 16px; bottom: 16px; z-index: 1080; max-width: calc(100vw - 32px); }
+
+/* ---------- Modal konfirmasi (tanpa JS Bootstrap) ---------- */
+.modal-backdrop-custom { position: fixed; inset: 0; background: rgba(58, 34, 16, 0.45); z-index: 1070; }
